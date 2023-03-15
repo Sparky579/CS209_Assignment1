@@ -24,7 +24,7 @@ public class OnlineCoursesAnalyzer {
             br = new BufferedReader(new FileReader(datasetPath, StandardCharsets.UTF_8));
             br.readLine();
             while ((line = br.readLine()) != null) {
-                String[] info = line.split(",(?=([^\"]*\"[^\"]*\")*[^\"]*$)", -1);
+                String[] info = line.split(",(?=([^\\\"]*\\\"[^\\\"]*\\\")*[^\\\"]*$)", -1);
                 Course course = new Course(info[0], info[1], new Date(info[2]), info[3], info[4], info[5],
                         Integer.parseInt(info[6]), Integer.parseInt(info[7]), Integer.parseInt(info[8]),
                         Integer.parseInt(info[9]), Integer.parseInt(info[10]), Double.parseDouble(info[11]),
@@ -93,11 +93,13 @@ public class OnlineCoursesAnalyzer {
     //4
     public List<String> getCourses(int topK, String by) {
         if (by == "hours") {
-            return courses.stream().sorted(Comparator.comparingDouble(Course::getTotalHours).reversed()).map(Course::getTitle).distinct().limit(topK).collect(Collectors.toList());
+            return courses.stream().sorted(Comparator.comparingDouble(Course::getTotalHours).reversed().thenComparing(Course::getTitle)).map(Course::getTitle).distinct().limit(topK).collect(Collectors.toList());
 //                    .distinct().limit(topK).map(Course::getTitle).collect(Collectors.toList());
         }
         else if (by == "participants") {
-            return courses.stream().sorted(Comparator.comparingInt(Course::getParticipants).reversed()).map(Course::getTitle).distinct().limit(topK).collect(Collectors.toList());
+            return courses.stream()
+                    .sorted(Comparator.comparingInt(Course::getParticipants).reversed().thenComparing(Course::getTitle))
+                    .map(Course::getTitle).distinct().limit(topK).collect(Collectors.toList());
         }
         return null;
     }
@@ -110,13 +112,39 @@ public class OnlineCoursesAnalyzer {
 
     //6
     public List<String> recommendCourses(int age, int gender, int isBachelorOrHigher) {
-        return null;
+        return courses.stream()
+                .collect(Collectors.groupingBy(Course::getNumber))
+                .entrySet().stream()
+                .map(entry -> {
+                    List<Course> coursesForNumber = entry.getValue();
+                    String title = coursesForNumber.stream()
+                            .max(Comparator.comparing(Course::getLaunchDate))
+                            .get().title;
+                    double averageAge = coursesForNumber.stream()
+                            .mapToDouble(Course::getMedianAge).average().orElse(999);
+                    double averageGender = coursesForNumber.stream()
+                            .mapToDouble(Course::getPercentMale).average().orElse(999);
+                    double averageDegree = coursesForNumber.stream()
+                            .mapToDouble(Course::getPercentBachelorsOrHigher).average().orElse(999);
+                    double similarity = similarityValue(age, gender, isBachelorOrHigher,
+                            averageAge, averageGender, averageDegree);
+                    return Map.entry(title, similarity);
+                })
+                .sorted((e1, e2) -> {
+                    int valueComparison = e1.getValue().compareTo(e2.getValue());
+                    return (valueComparison != 0) ? valueComparison : e1.getKey().compareTo(e2.getKey());
+                })
+                .map(Map.Entry::getKey).distinct()
+                .limit(10).collect(Collectors.toList());
     }
     public static void main(String[] args) {
         OnlineCoursesAnalyzer analyzer = new OnlineCoursesAnalyzer("local.csv");
 //        System.out.println(analyzer.courses.size());
         List lis = analyzer.getCourses(10, "hours");
         System.out.println(lis);
+    }
+    public static double similarityValue(int age, int gender, int isBachelorOrHigher, double averageMedianAge, double averageGender, double doubleDegree) {
+        return Math.pow(age - averageMedianAge, 2) + Math.pow(gender * 100 - averageGender, 2) + Math.pow(isBachelorOrHigher * 100 - doubleDegree, 2);
     }
 
 
@@ -212,5 +240,20 @@ class Course {
 
     public double getPercentAudited() {
         return percentAudited;
+    }
+    public double getMedianAge() {
+        return medianAge;
+    }
+    public double getPercentMale() {
+        return percentMale;
+    }
+    public double getPercentBachelorsOrHigher() {
+        return percentDegree;
+    }
+    public String getNumber() {
+        return number;
+    }
+    public Date getLaunchDate() {
+        return launchDate;
     }
 }
