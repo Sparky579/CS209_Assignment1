@@ -104,7 +104,8 @@ public class OnlineCoursesAnalyzer {
 
     //5
     public List<String> searchCourses(String courseSubject, double percentAudited, double totalCourseHours) {
-        return null;
+        return courses.stream().filter(course -> course.getSubject().toLowerCase(Locale.ROOT).contains(courseSubject.toLowerCase(Locale.ROOT)) && course.getPercentAudited() >= percentAudited && course.getTotalHours() <= totalCourseHours)
+                .map(Course::getTitle).distinct().sorted().collect(Collectors.toList());
     }
 
     //6
@@ -209,4 +210,7 @@ class Course {
         return totalHours;
     }
 
+    public double getPercentAudited() {
+        return percentAudited;
+    }
 }
