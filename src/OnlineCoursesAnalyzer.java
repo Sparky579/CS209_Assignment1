@@ -66,8 +66,6 @@ public class OnlineCoursesAnalyzer {
 
     //3
     public Map<String, List<List<String>>> getCourseListOfInstructor() {
-        Stream<Course> courseStream = courses.stream();
-
         return courses.stream().flatMap(course -> Arrays.stream(course.getCleanInstructors().split(",")))
                 .map(String::trim)
                 .distinct()
@@ -94,6 +92,13 @@ public class OnlineCoursesAnalyzer {
 
     //4
     public List<String> getCourses(int topK, String by) {
+        if (by == "hours") {
+            return courses.stream().sorted(Comparator.comparingDouble(Course::getTotalHours).reversed()).map(Course::getTitle).distinct().limit(topK).collect(Collectors.toList());
+//                    .distinct().limit(topK).map(Course::getTitle).collect(Collectors.toList());
+        }
+        else if (by == "participants") {
+            return courses.stream().sorted(Comparator.comparingInt(Course::getParticipants).reversed()).map(Course::getTitle).distinct().limit(topK).collect(Collectors.toList());
+        }
         return null;
     }
 
@@ -109,10 +114,8 @@ public class OnlineCoursesAnalyzer {
     public static void main(String[] args) {
         OnlineCoursesAnalyzer analyzer = new OnlineCoursesAnalyzer("local.csv");
 //        System.out.println(analyzer.courses.size());
-        Map mp = analyzer.getCourseListOfInstructor();
-        for (Object key : mp.keySet()) {
-            System.out.println(key + " == " + mp.get(key));
-        }
+        List lis = analyzer.getCourses(10, "hours");
+        System.out.println(lis);
     }
 
 
@@ -201,6 +204,9 @@ class Course {
     }
     public String getTitle() {
         return title;
+    }
+    public double getTotalHours() {
+        return totalHours;
     }
 
 }
