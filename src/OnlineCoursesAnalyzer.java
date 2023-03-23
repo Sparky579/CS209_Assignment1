@@ -9,14 +9,15 @@ import java.util.stream.Stream;
 
 /**
  *
- * This is just a demo for you, please run it on JDK17 (some statements may be not allowed in lower version).
+ * This is just a demo for you,
+ * please run it on JDK17 (some statements may be not allowed in lower version).
  * This is just a demo, and you can extend and implement functions
  * based on this demo, or implement it in a different way.
+
  */
 public class OnlineCoursesAnalyzer {
 
     List<Course> courses = new ArrayList<>();
-
     public OnlineCoursesAnalyzer(String datasetPath) {
         BufferedReader br = null;
         String line;
@@ -25,12 +26,17 @@ public class OnlineCoursesAnalyzer {
             br.readLine();
             while ((line = br.readLine()) != null) {
                 String[] info = line.split(",(?=([^\\\"]*\\\"[^\\\"]*\\\")*[^\\\"]*$)", -1);
-                Course course = new Course(info[0], info[1], new Date(info[2]), info[3], info[4], info[5],
-                        Integer.parseInt(info[6]), Integer.parseInt(info[7]), Integer.parseInt(info[8]),
+                Course course = new Course(info[0],
+                        info[1], new Date(info[2]), info[3], info[4], info[5],
+                        Integer.parseInt(info[6]), Integer.parseInt(info[7]),
+                        Integer.parseInt(info[8]),
                         Integer.parseInt(info[9]), Integer.parseInt(info[10]), Double.parseDouble(info[11]),
-                        Double.parseDouble(info[12]), Double.parseDouble(info[13]), Double.parseDouble(info[14]),
-                        Double.parseDouble(info[15]), Double.parseDouble(info[16]), Double.parseDouble(info[17]),
-                        Double.parseDouble(info[18]), Double.parseDouble(info[19]), Double.parseDouble(info[20]),
+                        Double.parseDouble(info[12]), Double.parseDouble(info[13]),
+                        Double.parseDouble(info[14]),
+                        Double.parseDouble(info[15]), Double.parseDouble(info[16]),
+                        Double.parseDouble(info[17]),
+                        Double.parseDouble(info[18]), Double.parseDouble(info[19]),
+                        Double.parseDouble(info[20]),
                         Double.parseDouble(info[21]), Double.parseDouble(info[22]));
                 courses.add(course);
             }
@@ -52,7 +58,8 @@ public class OnlineCoursesAnalyzer {
         Map<String, Integer> mp;
         Stream<Course> courseStream = courses.stream();
         mp = courseStream.collect(Collectors.groupingBy(Course::getInstitution, Collectors.summingInt(Course::getParticipants)));
-        mp = mp.entrySet().stream().sorted(Map.Entry.comparingByKey()).collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
+        mp = mp.entrySet().stream().sorted(Map.Entry.comparingByKey()).collect(Collectors.toMap(Map.Entry::getKey,
+                Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
         return mp;
     }
 
@@ -137,12 +144,14 @@ public class OnlineCoursesAnalyzer {
                 .map(Map.Entry::getKey).distinct()
                 .limit(10).collect(Collectors.toList());
     }
+
     public static void main(String[] args) {
         OnlineCoursesAnalyzer analyzer = new OnlineCoursesAnalyzer("local.csv");
 //        System.out.println(analyzer.courses.size());
         List lis = analyzer.getCourses(10, "hours");
         System.out.println(lis);
     }
+
     public static double similarityValue(int age, int gender, int isBachelorOrHigher, double averageMedianAge, double averageGender, double doubleDegree) {
         return Math.pow(age - averageMedianAge, 2) + Math.pow(gender * 100 - averageGender, 2) + Math.pow(isBachelorOrHigher * 100 - doubleDegree, 2);
     }
