@@ -151,7 +151,6 @@ public class OnlineCoursesAnalyzer {
 
     public static void main(String[] args) {
         OnlineCoursesAnalyzer analyzer = new OnlineCoursesAnalyzer("local.csv");
-        //   System.out.println(analyzer.courses.size());
         List lis = analyzer.getCourses(10, "hours");
         System.out.println(lis);
     }

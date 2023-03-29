@@ -1,0 +1,205 @@
+C:\Users\17798\.jdks\corretto-17.0.6\bin\java.exe "-javaagent:D:\Program Files\JetBrains\IntelliJ IDEA 2021.2.1\lib\idea_rt.jar=58022:D:\Program Files\JetBrains\IntelliJ IDEA 2021.2.1\bin" -Dfile.encoding=UTF-8 -classpath C:\codes\CS209\CS209_Project1\out\production\Project1;C:\Users\17798\.m2\repository\junit\junit\4.13.1\junit-4.13.1.jar;C:\Users\17798\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\17798\.m2\repository\org\junit\jupiter\junit-jupiter\5.7.0\junit-jupiter-5.7.0.jar;C:\Users\17798\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.7.0\junit-jupiter-api-5.7.0.jar;C:\Users\17798\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\17798\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\17798\.m2\repository\org\junit\platform\junit-platform-commons\1.7.0\junit-platform-commons-1.7.0.jar;C:\Users\17798\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.7.0\junit-jupiter-params-5.7.0.jar;C:\Users\17798\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.7.0\junit-jupiter-engine-5.7.0.jar;C:\Users\17798\.m2\repository\org\junit\platform\junit-platform-engine\1.7.0\junit-platform-engine-1.7.0.jar OnlineCoursesAnalyzer
+Key = Health and Society, Value = 99.29
+Key = The Political and Intellectual Foundations of China, Value = 145.08
+Key = Creating Modern China: The Birth of a Nation, Value = 2.02
+Key = Design and Development of Educational Technology, Value = 72.97
+Key = First Nights: Beethoven's 9th Symphony, Value = 19.23
+Key = World Religions Through their Scriptures: Christianity, Value = 37.58
+Key = Introduction to Data Wise: A Collaborative Process to Improve Learning and Teaching, Value = 30.340000000000003
+Key = Introduction to American Government, Value = 63.24
+Key = Literati China: Examinations and Neo-Confucianism, Value = 3.11
+Key = Mastering Quantum Mechanics: Wave Mechanics, Value = 72.3
+Key = Computation Structures: Computer Architecture, Value = 56.13
+Key = Contracts Law: From Trust to Promise to Contract, Value = 148.31
+Key = Shaping the Future of Work, Value = 10.78
+Key = History of the Book: Monasteries, Schools, and Notaries, Part 1: Reading the Late Medieval Marseille Archive, Value = 6.13
+Key = Entrepreneurship 101: Who Is Your Customer?, Value = 283.45
+Key = History of the Book: The History of the Book in the 17th and 18th Century Europe, Value = 5.71
+Key = Atomic and Optical Physics: Atomic structure and atoms in external field, Value = 9.8
+Key = Becoming an Entrepreneur, Value = 83.62
+Key = Science and Cooking: From Haute Cuisine to Soft Matter Science, Value = 467.47999999999996
+Key = Data Analysis for Genomics: Introduction to Bioconductor: Annotation and Analysis of Genomes and Genomic Assays, Value = 5.99
+Key = Human Health and Global Environmental Change, Value = 110.67
+Key = Data Analysis for Genomics: Statistics and R for the Life Sciences, Value = 107.06
+Key = Central Challenges in American National Security, Strategy and the Press, Value = 20.36
+Key = Calculus: Integration, Value = 114.85
+Key = Foundations of Development Policy: Advanced Development Economics, Value = 77.46
+Key = Advanced Statistics for the Life Sciences, Value = 37.84
+Key = Early Christianity: The Letters of Paul, Value = 101.83
+Key = Tangible Things, Value = 33.75
+Key = Underactuated Robotics, Value = 86.71000000000001
+Key = The Einstein Revolution, Value = 61.41
+Key = Principles of Synthetic Biology, Value = 83.14
+Key = Introduction to Game Design, Value = 77.35
+Key = Readings in Global Health, Value = 29.9
+Key = Advanced Introductory Classical Mechanics, Value = 197.06
+Key = The Ancient Greek Hero in 24 Hours (Hours 6-11): Signs of the Hero in Epic and Iconography, Value = 6.77
+Key = Philosophy: Minds and Machines, Value = 94.63
+Key = Poetry in America: Emily Dickinson, Value = 20.14
+Key = Data Analysis for Genomics: Matrix Algebra and Linear Models, Value = 10.6
+Key = The Ancient Greek Hero, Value = 206.28
+Key = Data Analysis for Genomics: Statistical Inference and Modeling for High-throughput Experiments, Value = 8.89
+Key = Visualizing Japan (1850s-1930s): Westernization, Protest, Modernity, Value = 50.65
+Key = Atomic and Optical Physics: Coherence, Value = 2.6
+Key = Atomic and Optical Physics: Atom-Light Interactions 2: Line Broadening and Two-Photon Transitions, Value = 3.88
+Key = Circuits and Electronics: Amplification, Speed, and Delay, Value = 35.739999999999995
+Key = Introduction to Family Engagement in Education, Value = 4.26
+Key = Computation Structures: Digital Circuits, Value = 223.71
+Key = History of the Book: Scrolls in the Age of the Book, Value = 4.95
+Key = Transforming Business, Society, and Self, Value = 248.35000000000002
+Key = From a Global Empire under the Mongols to a Global Economy under the Ming Dynasty, Value = 2.27
+Key = History of the Book: Book Sleuthing: What 19th-Century Books Can Tell Us About the Rise of the Reading Public, Value = 3.35
+Key = Paradox and Infinity, Value = 83.98
+Key = Magnetic Materials and Devices, Value = 6.87
+Key = Atomic and Optical Physics: Resonance, Value = 18.64
+Key = Saving Schools: History, Politics, and Policy in U.S. Education, Value = 3.16
+Key = Creating China: The Birth of a Nation, Value = 23.92
+Key = Making Biologic Medicines for Patients: The Principles of Biopharmaceutical Manufacturing, Value = 89.39
+Key = Energy Within Environmental Constraints, Value = 94.63
+Key = The Creation and End of Centralized Empire, Value = 6.84
+Key = Big Data and Social Physics, Value = 34.79
+Key = Building Mobile Experiences, Value = 64.72
+Key = The Manchus and the Qing Dynasty, Value = 3.66
+Key = Challenges of World Poverty, Value = 84.99
+Key = Innovation and Commercialization, Value = 137.87
+Key = The Ancient Greek Hero in 24 Hours (Hours 12-15): Cult of Heroes, Value = 3.2
+Key = Innovating in Health Care, Value = 41.08
+Key = Data Analysis for Genomics: Statistics and R, Value = 64.81
+Key = Data Analysis for Genomics: Case study, Variant Discovery and Genotyping, Value = 8.35
+Key = Poetry in America: Modernism, Value = 24.48
+Key = Data Analysis for Genomics: Introduction to High-Dimensional Data Analysis, Value = 8.21
+Key = Mobile Application Experiences: Mobile App Design, Value = 5.8
+Key = First Nights: Symphonie Fantastique, Value = 1.71
+Key = Global Warming Science, Value = 80.1
+Key = Introduction to Linear Models and Matrix Algebra, Value = 27.9
+Key = AnatomyX: Musculoskeletal Cases, Value = 88.43
+Key = Practical Improvement Science in Health Care: A Roadmap for Getting Results, Value = 19.79
+Key = Evaluating Social Programs, Value = 162.03
+Key = Data Analysis for Genomics: High-performance Computing for Reproducible Genomics, Value = 2.99
+Key = Mechanical Behavior of Materials: Linear Elastic Behavior, Value = 40.32
+Key = Elements of Structures, Value = 174.07
+Key = Global Health Case Studies from a Biosocial Perspective, Value = 28.87
+Key = Implementation and Evaluation of Educational Technology, Value = 20.58
+Key = Cell Biology: Mitochondria, Value = 39.56
+Key = Mastering Quantum Mechanics: Entanglement and Angular Momentum, Value = 19.33
+Key = Introduction to Computer Science and Programming Using Python, Value = 1302.5900000000001
+Key = Introduction to Philosophy: God, Knowledge and Consciousness, Value = 219.57999999999998
+Key = Supply Chain Design, Value = 672.03
+Key = Invasions, Rebellions and the Fall of Imperial China, Value = 2.03
+Key = Light, Spike, and Sight: The Neuroscience of Vision, Value = 18.49
+Key = First Nights: L'Orfeo, Value = 4.94
+Key = Introduction to Computer Science, Value = 1350.22
+Key = Mechanical Behavior of Materials: Time Dependent Behavior and Failure, Value = 14.81
+Key = Calculus: Coordinate Systems and Infinite Series, Value = 44.72
+Key = Electronic Materials and Devices, Value = 28.25
+Key = Introduction to Bioconductor, Value = 29.02
+Key = Data Analysis for Genomics: Case study, DNA Methylation Data Analysis, Value = 5.33
+Key = History of the Book: Print and Manuscript in Western Europe, Asia and the Middle East (1450-1650), Value = 4.39
+Key = Circuits and Electronics: Basic Circuit Analysis, Value = 230.6
+Key = History of the Book: Making and Meaning in the Medieval Manuscript, Value = 11.11
+Key = Mobile Application Experiences: Building Mobile Apps, Value = 4.28
+Key = Introduction to Aerodynamics, Value = 51.1
+Key = Poetry in America: Nature and Nation, American Poetry, 1700-1850, Value = 6.58
+Key = Invasions, Rebellions, and the end of Imperial China, Value = 22.93
+Key = Mobile Application Experiences: Reporting Research Findings, Value = 0.11
+Key = Data Analysis for Genomics, Value = 58.19
+Key = Saving Schools: History, Politics, and Policy of U.S. Education - Accountability and National Standards, Value = 4.58
+Key = Political and Intellectual Foundations: From the Sage Kings to Confucius and the Legalists, Value = 25.68
+Key = Making Science and Engineering Pictures: A Practical Guide to Presenting Your Work, Value = 15.61
+Key = Poetry in America: Whitman, Value = 19.6
+Key = Effective Field Theory, Value = 16.85
+Key = World Religions Through their Scriptures: Hinduism, Value = 18.76
+Key = Lessons from Ebola: Preventing the Next Pandemic, Value = 14.21
+Key = Saving Schools: History, Politics, and Policy of U.S. Education - Teacher Policies, Value = 1.85
+Key = History of the Book: The Medieval Book of Hours: Art and Devotion in the Later Middle Ages, Value = 6.93
+Key = Cellular Solids: Structures, Properties and Engineering Applications, Value = 16.98
+Key = Poetry in America: The Civil War and Its Aftermath, Value = 7.49
+Key = Saving Schools: History, Politics, and Policy of U.S. Education - History and Politics in U.S. Education, Value = 17.439999999999998
+Key = Health in Numbers: Quantitative Methods in Clinical and Public Health Research, Value = 804.41
+Key = The Last Empire, Value = 31.69
+Key = Leaders of Learning, Value = 123.22
+Key = History of the Book: Books in the Medieval Liturgy, Value = 4.51
+Key = Super-Earths and Life, Value = 130.03
+Key = Quantitative Biology Workshop, Value = 111.64
+Key = Justice, Value = 254.75
+Key = Cosmopolitan Tang: Aristocratic Culture, Value = 37.199999999999996
+Key = World Religions Through their Scriptures: Buddhism, Value = 25.96
+Key = Data Analysis for Genomics: Case Study, RNA Sequence Data Analysis, Value = 12.86
+Key = Calculus: Differentiation, Value = 218.27
+Key = ContractsX: From Trust to Promise to Contract, Value = 68.16
+Key = Mechanics Review, Value = 86.76
+Key = Molecular Biology: DNA Replication and Repair, Value = 171.99
+Key = Introduction to Aerospace Engineering: Astronautics and Human Spaceflight, Value = 121.16
+Key = Supply Chain and Logistics Fundamentals, Value = 1274.75
+Key = Mechanical Behavior of Materials, Value = 81.04
+Key = Discrete-Time Signal Processing, Value = 48.98
+Key = Mechanical Behavior of Materials: Stress Transformations, Beams, Columns, and Cellular Solids, Value = 20.12
+Key = Central Challenges in American National Security, Strategy and the Press: An Introduction, Value = 12.57
+Key = Optical Materials and Devices, Value = 11.1
+Key = Data Analysis for Genomics: Case Studies in Functional Genomics, Value = 5.68
+Key = HarvardX for Alumni: Explorations in Learning, Value = 7.23
+Key = Introduction to Computational Thinking and Data Science, Value = 649.16
+Key = Principles of Biochemistry, Value = 90.12
+Key = From Global Empire to Global Economy, Value = 24.76
+Key = Unlocking the Immunity to Change, Value = 159.84
+Key = Poetry in America: The Poetry of Early New England, Value = 21.57
+Key = Introduction to Biology: Secret of Life, Value = 1049.33
+Key = Electricity and Magnetism, Value = 380.35
+Key = World Religions Through their Scriptures: Religious Literacy, Traditions and Scriptures, Value = 79.36
+Key = The Creation and End of a Centralized Empire, Value = 68.25
+Key = Communist Liberations, Value = 23.03
+Key = Atomic and Optical Physics: Atom-Light Interactions 1 -- Matrix elements and quantized field, Value = 6.44
+Key = Street Fighting Math, Value = 56.9
+Key = The Analytics Edge, Value = 2220.53
+Key = Global Architecture, Value = 138.94
+Key = Global Health: Case Studies from a Biosocial Perspective, Value = 39.34
+Key = History of the Book: Monasteries, Schools, and Notaries, Part 2: Introduction to the Transitional Gothic Script, Value = 3.49
+Key = First Nights: Handel's Messiah and Baroque Oratorio, Value = 12.87
+Key = Poetry in America: Walt Whitman, Value = 9.2
+Key = Introduction to Control System Design, Value = 15.62
+Key = The Ancient Greek Hero in 24 Hours (Hours 16-21): The Hero in Tragedy, Value = 3.63
+Key = Circuits and Electronics: Applications, Value = 17.95
+Key = Unlocking the Immunity to Change: A New Approach to Personal Improvement, Value = 51.77
+Key = Introduction to Solid State Chemistry, Value = 556.33
+Key = Molecular Biology: Transcription and Transposition, Value = 47.23
+Key = Cellular Solids: Applications in Nature, Value = 1.55
+Key = Circuits and Electronics, Value = 914.08
+Key = United States Health Policy, Value = 47.9
+Key = World Religions Through Their Scriptures: Islam, Value = 39.83
+Key = Saving Schools: History, Politics, and Policy in U.S. Education - Teacher Policies, Value = 3.28
+Key = Introduction to State Space Control, Value = 3.22
+Key = User Innovation: A Path to Entrepreneurship, Value = 69.95
+Key = A Global History of Architecture, Value = 131.88
+Key = Classical Mechanics, Value = 452.55
+Key = Mechanics ReView, Value = 145.95
+Key = Just Money: Banking as if Society Mattered, Value = 24.76
+Key = China and Communism, Value = 1.95
+Key = Saving Schools: History, Politics, and Policy of U.S. Education - School Choice, Value = 1.08
+Key = Mastering Quantum Mechanics: Quantum Dynamics, Value = 25.48
+Key = Mobile Application Experiences: Understanding Use, Value = 0.62
+Key = Electrical, Optical and Magnetic Materials and Devices, Value = 30.79
+Key = The Challenges of Global Poverty, Value = 391.15000000000003
+Key = Entrepreneurship 102: What Can You Do For Your Customer?, Value = 45.010000000000005
+Key = Mobile Application Experiences: From a Domain to an App Idea, Value = 27.77
+Key = Data Analysis for Genomics: Case study, ChIP Sequence Data Analysis, Value = 3.6
+Key = Greater China Today: The People's Republic, Taiwan, and Hong Kong, Value = 53.169999999999995
+Key = JuryX: Deliberations for Social Change, Value = 5.88
+Key = The Ancient Greek Hero: Plato and Beyond, Value = 2.41
+Key = Mastering Quantum Mechanics, Value = 187.44
+Key = Fundamentals of Clinical Trials, Value = 104.37
+Key = Design and Development of Games for Learning, Value = 36.12
+Key = Introduction to Computer Science and Programming, Value = 4055.7599999999998
+Key = Improving Global Health: Focusing on Quality and Safety, Value = 40.6
+Key = Entrepreneurship and Healthcare in Emerging Economies, Value = 17.21
+Key = Introduction to Probability: The Science of Uncertainty, Value = 710.5699999999999
+Key = Cellular Solids: Applications in Medicine, Value = 2.53
+Key = Symmetry, Structure and Tensor Properties of Materials, Value = 11.54
+Key = The Ancient Greek Hero in 24 Hours (Hours 1-5): Epic and Lyric, Value = 17.31
+Key = A New National Culture, Value = 34.82
+Key = Introduction to Feedback Control Theory, Value = 21.3
+Key = Dynamics and Control I, Value = 60.99
+Key = Flight Vehicle Aerodynamics, Value = 63.05
+Key = The American Dream for the Next Generation, Value = 20.5
+[Introduction to Computer Science and Programming, The Analytics Edge, Introduction to Computer Science, Introduction to Computer Science and Programming Using Python, Supply Chain and Logistics Fundamentals, Introduction to Biology: Secret of Life, Circuits and Electronics, Health in Numbers: Quantitative Methods in Clinical and Public Health Research, Introduction to Probability: The Science of Uncertainty, Supply Chain Design]
+
+Process finished with exit code 0
