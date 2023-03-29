@@ -16,8 +16,8 @@ import java.util.stream.Stream;
 
  */
 public class OnlineCoursesAnalyzer {
-
     List<Course> courses = new ArrayList<>();
+
     public OnlineCoursesAnalyzer(String datasetPath) {
         BufferedReader br = null;
         String line;
@@ -30,7 +30,8 @@ public class OnlineCoursesAnalyzer {
                         info[1], new Date(info[2]), info[3], info[4], info[5],
                         Integer.parseInt(info[6]), Integer.parseInt(info[7]),
                         Integer.parseInt(info[8]),
-                        Integer.parseInt(info[9]), Integer.parseInt(info[10]), Double.parseDouble(info[11]),
+                        Integer.parseInt(info[9]), Integer.parseInt(info[10]),
+                        Double.parseDouble(info[11]),
                         Double.parseDouble(info[12]), Double.parseDouble(info[13]),
                         Double.parseDouble(info[14]),
                         Double.parseDouble(info[15]), Double.parseDouble(info[16]),
@@ -57,7 +58,8 @@ public class OnlineCoursesAnalyzer {
     public Map<String, Integer> getPtcpCountByInst() {
         Map<String, Integer> mp;
         Stream<Course> courseStream = courses.stream();
-        mp = courseStream.collect(Collectors.groupingBy(Course::getInstitution, Collectors.summingInt(Course::getParticipants)));
+        mp = courseStream.collect(Collectors.groupingBy(Course::getInstitution,
+                Collectors.summingInt(Course::getParticipants)));
         mp = mp.entrySet().stream().sorted(Map.Entry.comparingByKey()).collect(Collectors.toMap(Map.Entry::getKey,
                 Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
         return mp;
@@ -67,7 +69,8 @@ public class OnlineCoursesAnalyzer {
     public Map<String, Integer> getPtcpCountByInstAndSubject() {
         Stream<Course> courseStream = courses.stream();
         Map<String, Integer> mp = courseStream.collect(Collectors.groupingBy(v -> v.getInstitution() + "-" + v.getSubject(), Collectors.summingInt(Course::getParticipants)));
-        mp = mp.entrySet().stream().sorted(Map.Entry.comparingByValue(Comparator.reverseOrder())).collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
+        mp = mp.entrySet().stream().sorted(Map.Entry.comparingByValue(Comparator.reverseOrder())).
+                collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
         return mp;
     }
 
@@ -101,9 +104,8 @@ public class OnlineCoursesAnalyzer {
     public List<String> getCourses(int topK, String by) {
         if (by == "hours") {
             return courses.stream().sorted(Comparator.comparingDouble(Course::getTotalHours).reversed().thenComparing(Course::getTitle)).map(Course::getTitle).distinct().limit(topK).collect(Collectors.toList());
-//                    .distinct().limit(topK).map(Course::getTitle).collect(Collectors.toList());
-        }
-        else if (by == "participants") {
+            //.distinct().limit(topK).map(Course::getTitle).collect(Collectors.toList());
+        } else if (by == "participants") {
             return courses.stream()
                     .sorted(Comparator.comparingInt(Course::getParticipants).reversed().thenComparing(Course::getTitle))
                     .map(Course::getTitle).distinct().limit(topK).collect(Collectors.toList());
@@ -112,7 +114,8 @@ public class OnlineCoursesAnalyzer {
     }
 
     //5
-    public List<String> searchCourses(String courseSubject, double percentAudited, double totalCourseHours) {
+    public List<String> searchCourses(String courseSubject,
+                                      double percentAudited, double totalCourseHours) {
         return courses.stream().filter(course -> course.getSubject().toLowerCase(Locale.ROOT).contains(courseSubject.toLowerCase(Locale.ROOT)) && course.getPercentAudited() >= percentAudited && course.getTotalHours() <= totalCourseHours)
                 .map(Course::getTitle).distinct().sorted().collect(Collectors.toList());
     }
@@ -139,7 +142,8 @@ public class OnlineCoursesAnalyzer {
                 })
                 .sorted((e1, e2) -> {
                     int valueComparison = e1.getValue().compareTo(e2.getValue());
-                    return (valueComparison != 0) ? valueComparison : e1.getKey().compareTo(e2.getKey());
+                    return (valueComparison != 0)
+                            ? valueComparison : e1.getKey().compareTo(e2.getKey());
                 })
                 .map(Map.Entry::getKey).distinct()
                 .limit(10).collect(Collectors.toList());
@@ -147,7 +151,7 @@ public class OnlineCoursesAnalyzer {
 
     public static void main(String[] args) {
         OnlineCoursesAnalyzer analyzer = new OnlineCoursesAnalyzer("local.csv");
-//        System.out.println(analyzer.courses.size());
+        //   System.out.println(analyzer.courses.size());
         List lis = analyzer.getCourses(10, "hours");
         System.out.println(lis);
     }
@@ -198,14 +202,26 @@ class Course {
         this.institution = institution;
         this.number = number;
         this.launchDate = launchDate;
-        if (title.startsWith("\"")) title = title.substring(1);
-        if (title.endsWith("\"")) title = title.substring(0, title.length() - 1);
+        if (title.startsWith("\"")) {
+            title = title.substring(1);
+        }
+        if (title.endsWith("\"")) {
+            title = title.substring(0, title.length() - 1);
+        }
         this.title = title;
-        if (instructors.startsWith("\"")) instructors = instructors.substring(1);
-        if (instructors.endsWith("\"")) instructors = instructors.substring(0, instructors.length() - 1);
+        if (instructors.startsWith("\"")) {
+            instructors = instructors.substring(1);
+        }
+        if (instructors.endsWith("\"")) {
+            instructors = instructors.substring(0, instructors.length() - 1);
+        }
         this.instructors = instructors;
-        if (subject.startsWith("\"")) subject = subject.substring(1);
-        if (subject.endsWith("\"")) subject = subject.substring(0, subject.length() - 1);
+        if (subject.startsWith("\"")) {
+            subject = subject.substring(1);
+        }
+        if (subject.endsWith("\"")) {
+            subject = subject.substring(0, subject.length() - 1);
+        }
         this.subject = subject;
         this.year = year;
         this.honorCode = honorCode;
@@ -225,24 +241,32 @@ class Course {
         this.percentFemale = percentFemale;
         this.percentDegree = percentDegree;
     }
+
     public String getInstitution() {
         return institution;
     }
+
     public int getParticipants() {
         return participants;
     }
+
     public String getSubject() {
         return subject;
     }
+
     public String getInstructors() {
+
         return instructors;
     }
+
     public String getCleanInstructors() {
         return instructors.replaceAll("\\s*\\([^()]*\\)\\s*", "");
     }
+
     public String getTitle() {
         return title;
     }
+
     public double getTotalHours() {
         return totalHours;
     }
@@ -250,18 +274,23 @@ class Course {
     public double getPercentAudited() {
         return percentAudited;
     }
+
     public double getMedianAge() {
         return medianAge;
     }
+
     public double getPercentMale() {
         return percentMale;
     }
+
     public double getPercentBachelorsOrHigher() {
         return percentDegree;
     }
+
     public String getNumber() {
         return number;
     }
+
     public Date getLaunchDate() {
         return launchDate;
     }
